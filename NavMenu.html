@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigation Menu</title>
+        <style>
+            #left:checked ~.Menu{
+                left: 100%;
+            }
+
+            #right:checked ~.Menu{
+                left: 0%;
+            }
+
+            #top:checked ~.Menu{
+                top:0%;
+                left: 50%;
+            }
+
+            .Menu{
+                margin: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+
+            .submenu{
+            display:none;
+        }
+            .active:hover > ul{
+            display:block;
+            width: 180px;
+                    }
+
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #24252A;
+            }
+
+        button {
+            padding: 9px 25px;
+            color: white;
+            background-color: rgb(24, 119, 114);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+
+           li a {
+            display: block;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            } 
+
+            li a.active {
+            background-color: #0c6e86;
+            color: white;
+            }
+
+            li a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+            }
+            
+            
+
+        </style>
+    </head>
+    <body>
+        <div>
+        <input type="radio" name="my-input" id="left">
+        <input type="radio" name="my-input" id="right">
+        <input type="radio" name="my-input" id="top"> 
+        <div class="Menu">
+            <ul>
+                <li><a class="active" href="#home">Home
+                  <ul class="submenu">
+                          <li>1</li>
+                          <li>2</li>
+                          <li>3</li>
+                      </ul>
+                  </a></li>
+                <li><a href="#"><label for="left">Left</label></a></li>
+                <li><a href="#"><label for="right">Right</label></a></li>
+                <li><a href="#"><label for="top">Top</label></a></li>            
+              </ul>
+        </div>
+    </div>
+    </body>
+</html>
