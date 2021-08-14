@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Letter pop-up animation </title>
+        <style>
+            body
+            {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #333;
+            }
+
+            h2
+            {
+            margin: 0;
+            padding: 0;
+            font-size: 60px;
+            text-transform: uppercase;
+            }
+
+            h2 span
+            {
+            display: inline-flex;
+            color: #a1ff34;
+            }
+
+            h2 span:nth-child(even)
+            {
+            overflow: hidden;
+            transition: ease-in-out 0.5s;
+            color: #fff;
+            border-buttom: 8px solid #a1ff34;
+            letter-spacing: -1em;
+            }
+            h2:hover span:nth-child(even)
+            {
+            letter-spacing: 0;
+            }
+            h2:hover span:nth-child(2)
+            {
+            transition-delay: 0s;
+            }
+            h2:hover span:nth-child(4)
+            {
+            transition-delay: 0.5s;
+            }
+            h2:hover span:nth-child(6)
+            {
+            transition-delay: 1s;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            <span>R</span><span>ebel</span>
+            <span>U</span><span>nder</span>
+            <span>N</span><span>ante</span>
+        </h2>
+    </body>
+</html>
